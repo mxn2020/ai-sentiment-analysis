@@ -1,45 +1,94 @@
-# AI Sentiment Analysis for Support Calls
+# AI Sentiment Analysis
 
-## Pages & Features
+AI sentiment analysis for support calls and customer feedback.
 
-### 1. Dashboard
-- Overall sentiment score (positive / neutral / negative)
-- Sentiment trend chart (daily / weekly / monthly)
-- Escalation alert feed (highly negative calls)
-- Top positive & negative drivers
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
 
-### 2. Call Analysis
-- Per-call sentiment timeline (emotion over time)
-- Speaker-level sentiment breakdown
-- Key phrase extraction with sentiment tags
-- Highlight reel of critical moments
+## Tech Stack
 
-### 3. Real-Time Monitor
-- Live sentiment gauge during active calls
-- Automatic alerts when negativity spikes
-- Supervisor intervention prompts
-- Agent coaching cues in real time
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
 
-### 4. Agent Performance
-- Sentiment scores per agent
-- Before & after comparison (training impact)
-- Customer satisfaction correlation
-- Agent leaderboard by positive outcomes
+## Getting Started
 
-### 5. Topic Analysis
-- Sentiment breakdown by topic / issue category
-- Trending negative topics alert
-- Root cause identification
-- Compare sentiment across products / services
+```bash
+npm install
+cp .env.example .env.local
+# Set VITE_CONVEX_URL to your deployment URL
+npm run dev
+```
 
-### 6. Reports
-- Weekly / monthly sentiment reports
-- Department & team comparisons
-- Sentiment vs. resolution time correlation
-- Export as PDF / CSV
+## License
 
-### 7. Settings
-- Sentiment model calibration
-- Alert thresholds & notification rules
-- Language & dialect support
-- Integration with call center / CRM
+MIT © Mehdi Nabhani
+
+---
+
+<details>
+<summary>📋 Original Feature Spec</summary>
+
+# {{APP_TITLE}}
+
+{{APP_DESCRIPTION}}
+
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
+
+## Tech Stack
+
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 22+
+- A running [shared Convex backend](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+
+### Setup
+
+```bash
+# Install dependencies
+npm install
+
+# Create .env.local with your Convex URL
+cp .env.example .env.local
+# Edit .env.local and set VITE_CONVEX_URL to your deployment URL
+
+# Start the dev server
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) to view the app.
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start Vite dev server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run typecheck` | Run TypeScript type checking |
+
+## Project Structure
+
+```
+src/
+  main.tsx              # Entry point with ConvexAuthProvider
+  App.tsx               # Auth routing (Landing vs Dashboard)
+  App.css               # Component styles
+  index.css             # Global styles & design tokens
+  components/
+    Landing.tsx          # Marketing/landing page
+    SignIn.tsx           # Auth form (sign-in/sign-up)
+    Dashboard.tsx        # Authenticated app shell
+api.ts                   # Convex API types (from shared backend)
+```
+
+## License
+
+MIT © Mehdi Nabhani
+
+</details>
